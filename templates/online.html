@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the house online</title>
+    <header style="background-image: url(/static/chicken.jpg);">
+        <h1 style="font-size: 50px; font-weight:bolder;color:rgb(4, 0, 255);text-align: center;">WELCOME TO <mark>THE HOUSE</mark> ONLINE</h1>
+        <p style="text-align: center;"><img src="/static/thehouse.jpg" width="50%" height="30%" ></p>
+    </header>
+</head>
+<body>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+        div.content{
+            text-align: left;
+            background-color: brown;
+            border-width: 200px;
+            padding: 10%;
+            margin: 10%;
+            
+            
+            
+
+        }
+        div.middle {
+            text-align: center;
+        }
+        button {
+            font-weight: bolder;
+            font-size: 20px;
+            color:black;
+            text-align: center;
+        }
+        p.paragraph{
+            background-color: aquamarine;
+        }
+    </style>
+    <div class="content">
+        <h1 style="color: pink; font-size:40px">FEEL FREE TO EXPLORE OUR AMAZING WELL PREPARED MEALS AND DESSERTS.</h1>
+        <p id="added"></p>
+        <div style="font-size: 30px;color:rgb(255, 255, 255); text-align: center;">
+            <img src="/static/cake.jpg" width="250px"height="282px" id="cakephoto"><br/>ORDER YOURSELF GABY'S <br/>CAKE AT QR 59 ONLY<br/>
+            <button id="carrotcake" onclick="return add()">Add to cart</button>
+        </div>
+        <br/>
+        <div style="font-size: 30px;color:rgb(255, 255, 255); text-align: center;">
+            <img src="/static/1.jpg" width="250px" height="282px"><br/>YOU CAN HAVE ALL <br/>THIS AT QR 79 ONLY.<BR/>
+            <button id="beef" onclick="return add1()">Add to cart</button>
+        </div>
+        <div style="font-size: 30px;color:rgb(255, 255, 255); text-align: center;">
+            <img src="/static/2.jpg" width="250px" height="282px"><br/>ORDER CHICKEN MUSHROOM<br/>BIRYANI AT QR 99 ONLY<br/>
+            <button id="mashroom" onclick="return add2()">Add to cart</button>
+        </div>
+        <br/>
+        <p id="confirms" style="text-align: center;"></p>
+        <button type="button" id="btn1" name="button" onclick="return add3()">click to confirm</button>
+    </div>
+    <script>
+        var cake = document.getElementById('carrotcake')
+        var beef = document.getElementById('beef')
+        var mashroom = document.getElementById('mashroom')
+        var confirms = document.getElementById("confirm")
+        var btn1 = document.getElementById("btn1")
+        let cart = []
+        function add(){
+            cake.innerText="added to cart"
+            cake.style.color="green"
+            cake.style.backgroundColor="yellow"
+            cart.push(cake)
+            return true
+        }
+        function add1(){
+            beef.innerText="added to cart"
+            beef.style.color="green"
+            beef.style.backgroundColor="yellow"
+            cart.push(beef)
+            return true
+        }
+        function add2(){
+            mashroom.innerText="added to cart"
+            mashroom.style.color="green"
+            mashroom.style.backgroundColor="yellow"
+            cart.push(mashroom)
+            return true
+        }
+        function add3(){
+            var confirms = document.getElementById("confirms")
+            if(cart.length >= 1){
+                confirms.innerText=cart.length+" item(s) are selected."
+                btn1.innerText="confirmed!"
+                
+            }
+            else{
+                document.getElementById("confirms").innerText="Cart is empty!"
+                btn1.innerText="Confirmed!"
+                
+            }
+
+
+        }           
+        
+    </script>
+    
+
+
+</body>
+</html>

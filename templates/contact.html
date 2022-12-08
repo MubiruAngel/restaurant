@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block title %}Contact us{% endblock %}
+{% block header %}
+<style>
+    header {
+        background-color: black;
+        text-align: right;
+    }
+    nav{
+        text-align: right;
+        width: 100%;
+        overflow: auto;
+        background-color: black;
+    }
+</style>
+<h1 style="font-size: 40px; color:gold">Dear our esteemed customer, please you can let us know how we can help you
+by sending us a message below.
+Thank you.</h1>{% endblock %}
+{% block body %}
+<style>
+    body {
+        background-color: rgb(163, 215, 228);
+        margin: 0;
+        padding: 0;
+
+    }
+    form {
+        font-size: 15px;
+        color: brown;
+        max-width: 550px;
+        width: 90%;
+        background: rgb(182, 182, 170);
+        padding: 10px;
+        margin: 20px;
+    }
+    label {
+        font-weight: 20px;
+        border-radius: block;
+    }
+    input {
+        font-size: bold;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 40%;
+        background-color: rgb(244, 253, 253);
+        color:rgb(0, 17, 255);
+        font-weight: 10px;
+        font-weight: bolder;
+        padding: 5px;
+    }
+    button {
+        font-size: 20px;
+        font-weight: bold;
+        background-color: greenyellow;
+        width: 70%;
+        color: blueviolet;
+        border-radius: none;
+        padding: 10px;
+    }
+    h1 {
+        font-weight: bold;
+        color: blueviolet;
+    }
+    textarea {
+        width: 50%;
+        background-color: aqua;
+        color: blue;
+        font-weight: bolder;
+        font-size: 12px;
+    }
+</style>
+<center>
+<form id="form" action="http://127.0.0.1:5000" onsubmit="Validate()">
+    <div id="message" style="color: white; font-size: 30px;"></div>
+    <h1>CONTACT <mark>THE HOUSE</mark></h1>
+    <label for="name">Full name</label><br/>
+    <input type="text" id="Name" name="name" placeholder="your name"><br/>
+    <label for="phone">Phone number</label><br/>
+    <input type="number" id="phone" name="phone" placeholder="Phone number"><br/>
+    <label for="address">Your Address</label><br/>
+    <input type="text" id="address" name="address" placeholder="Address/Optional"><br/>
+    <p style="font-weight: bold;">Type your message here.</p>
+    <textarea rows="10" cols="50" placeholder="Type in your message"></textarea><br/>
+    <button type="submit" id="submit" onclick="return Validate()">Submit</button>
+</form>
+<script>
+    var Name = document.getElementById('Name')
+    var phone = document.getElementById('phone')
+    var address = document.getElementById('address')
+
+
+    function Validate(){
+        if(Name.value.trim()=='' || phone.value.trim()==''){
+            alert("Name and Phone Number are required");
+            return false
+            
+            
+        }
+        if(address.value == ""){
+            alert("address is required")
+            return false 
+        }
+        else{
+            alert('Your message was submitted successfully.Thank you for contacting us')
+            return true
+            
+        }
+
+    
+    }
+</script>
+</center>
+{% endblock %}

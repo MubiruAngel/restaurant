@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block title %}home page{% endblock %}
+{% block header %}
+<script type="text/javascript">
+
+</script>
+<style>
+    header {
+        background-color: rgb(216, 218, 216);
+    }
+</style>
+{% endblock %}
+{% block body %}
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(225, 233, 219);
+        
+    }
+    div.topBody{
+        background-color: rgb(236, 201, 233);
+        background-image: url(/static/foodimage.jpg);
+        text-align: center;
+    }
+    div.bodyPart{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: green;
+    }
+    button {
+        font-family: sans-serif;
+        border: none;
+        padding: 15px 30px;
+        font-size: 20px;
+        outline: none;
+        border-radius: 5px;
+        color: blueviolet;
+        background-color: rgb(219, 255, 118);
+        font-weight: 20px;
+        font-weight: bolder;
+    
+    }
+    div.bottom_body{
+        background-color: rgb(186, 226, 43);
+    }
+    a{
+        
+        font-size: 40px;
+        color: white;
+    
+            
+    }
+</style>
+<div class="topBody">
+    <center>    
+    <h1 style="color: rgb(47, 0, 255); font-size: 40px;">WELCOME TO <mark>THE HOUSE</mark> RESTAURANT QATAR WEBSITE</h1>
+    <img src="static/thehouse.jpg" width="30%" height="20%">
+    <p style="font-weight: bolder; font-size:30px; color: rgb(25, 0, 255);">We are located at Lusail City, Manarat Building, 6<sup>th</sup> Floor</p>
+    </center>
+    <center>
+    <p style="font-size:30px; color:white; font-weight: large;"> We offer a variety of buffet and cuisines..<br/>
+        You can visit us and experience the state of the dine<br/> influenced by qatari culture and our delicious meals  </style>
+    <center>   
+    </p>
+    <p type="number" style="font-size: 40px; color:rgb(240, 240, 248)">CALL US: (+974)31048658<br/><br/>WORKING HOURS: 7AM TO 12AM</p>
+    
+    <form action="http://127.0.0.1:5000/contact">
+        <button style="text-align: left;" type="submit">CLICK TO BOOK A TABLE</a></button>
+    </form>
+    <br/>
+    <form action="http://127.0.0.1:5000/online">
+        <button class="button2" type="submit">CLICK TO ORDER ONLINE</button>
+    </form>
+    <br/>
+    
+</div>
+<div class="bodyPart">
+    <p></p>
+<h1>BUFFET</h1>
+        <p style="font-size: 40px; color:black">Chicken Biryani</p>
+        <img src="/static/chicken.jpg" height="600" width="600">
+        <p>we offer a wide range of chicken biryani tastes at your doorstep<br/>Please feel free to place an order at QR 79 only,
+        within 30 minutes<br/> your order will be delivered</p>
+        <p style="font-size: 40px; color:black">Mutton Biryani</p>
+        <img src="/static/mutton.jpg" height="600" width="600">
+        <p>we offer a wide range of mutton biryani tastes at your doorstep<br/>Please feel free to place an order at QR 89 only,
+            within 30 minutes<br/> your order will be delivered</p>
+        <p style="font-size: 40px; color:rgb(8, 8, 0)">Fish Biryani</p>
+        <img src="/static/fish.png" height="600" width="600">
+        <p>we offer a wide range of fish biryani tastes at your doorstep<br/>Please feel free to place an order at QR 89 only,
+            within 30 minutes<br/> your order will be delivered</p>
+</center> 
+<p><h1>DRINKS</h1></p>
+    <h1>
+        <p style="font-size: 40px; color: rgb(251, 255, 0);">COFFEE</p><br/>
+        <p style="font-size: 40px; color: rgb(255, 0, 0);">TEA</p><br/>
+        <p style="font-size: 40px; color: blue;">FRUITS JUICE</p><br/>
+        <p style="font-size: 40px; color: rgb(51, 255, 0);">SOFT DRINKS</p>
+    </h1>   
+</div>
+
+<center>
+    <div class="bottom_body">
+        <p><strong style="font-size: 40px; color:red; font-weight:bolder">Find us on</strong></p><br/>
+        <p><a href="https://www.facebook.com/angelbrown25thmay"><img src="/static/facebook.webp" width="150" height="100"></a>
+        <a href="https://twitter.com"><img src="/static/twitter.jpg" width="150" height="100"></a>
+        <a href="https://instagram.com"><img src="/static/R.jpg" width="150" height="100"></a>
+        <a href="https://linkedin.com"><img src="/static/linkedin.png" width="150" height="100"></a><br/></p>
+        
+    </div>
+</center>
+{% endblock %}
